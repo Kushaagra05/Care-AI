@@ -1,72 +1,124 @@
-#HACKATHON-TECHTONIK
-Support System for Behavioural Monitoring in Rehabilitation Centers
-Overview
+# Care-AI – Behavioural Monitoring Support System
 
-An AI-powered behavioral monitoring dashboard designed to assist nurses in mental health rehabilitation centers by identifying patients who may require closer attention based on behavioral pattern analysis.
+An AI-powered behavioural monitoring dashboard designed to assist
+rehabilitation nurses by identifying patients who may require closer
+observation based on behavioural pattern analysis.
 
-Problem Statement
+## Overview
 
-In a country like India, with a high population and limited healthcare workforce, rehabilitation nurses are responsible for monitoring many mental health patients simultaneously.
+Care-AI is a decision-support system developed during a hackathon to
+help rehabilitation nurses monitor patient behavioural patterns more
+efficiently.
 
-Continuous mental health monitoring is critical, but manual observation often leads to:
+The system analyzes behavioural data over time, identifies deviations
+from individual patient baselines, and highlights patients who may
+require closer attention.
 
-Heavy workload and nurse burnout
+The goal is not to replace healthcare professionals, but to provide
+nurses with clear, explainable insights that can support their
+decision-making.
 
-Delayed detection of mental health deterioration
+---
 
-Missed early warning signs in patient behavior
+## Problem Statement
 
-Proposed Solution
+In rehabilitation centres, nurses may be responsible for monitoring
+multiple patients simultaneously.
 
-This system acts as a decision-support tool for rehabilitation nurses by analyzing behavioral data and highlighting potential concerns early.
+Continuous manual observation can make it difficult to identify subtle
+changes in behaviour, potentially resulting in:
 
-The dashboard helps nurses prioritize patients efficiently while maintaining ethical and non-diagnostic usage.
+- Increased workload for healthcare staff
+- Delayed identification of behavioural changes
+- Missed early warning signs
+- Difficulty prioritizing patients who require closer observation
 
-Key Features
+---
 
-Monitors patient behavioral patterns over time
+## Proposed Solution
 
-Detects deviations from individual baselines
+Care-AI acts as a behavioural monitoring and decision-support tool.
 
-Highlights patients needing closer observation
+The system:
 
-Provides explainable and nurse-friendly insights
+1. Collects patient behavioural data
+2. Processes and validates the data
+3. Analyzes behavioural patterns
+4. Compares observations with individual baselines
+5. Identifies unusual patterns or deviations
+6. Highlights patients who may require closer observation
+7. Presents the findings through an interactive Streamlit dashboard
 
-Target Users
+The final decision remains with the healthcare professional.
 
-Rehabilitation Nurses
+---
 
-Technologies Used
+## Key Features
 
-Python
+### Behavioural Monitoring
+Tracks behavioural indicators such as activity, sleep, food-related
+scores, heart rate, stress levels, and therapy-related information.
 
-Streamlit
+### Baseline Analysis
+Analyzes patient behaviour over time and identifies deviations from
+their individual behavioural patterns.
 
-pandas
+### AI-Based Risk Analysis
+Uses machine-learning-based analysis to identify behavioural patterns
+that may require additional attention.
 
-NumPy
+### Explainable Insights
+Provides nurse-friendly information to help users understand why a
+patient has been highlighted.
 
-scikit-learn
+### Interactive Dashboard
+A Streamlit-based dashboard allows rehabilitation staff to view
+patient information and monitoring results in an accessible interface.
 
-How to Run the Project
-Option 1 (recommended on Windows)
-py -m streamlit run Dashboard.py
+### Nurse Authentication
+The system includes an authentication layer for accessing the
+monitoring dashboard.
 
-Option 2
-streamlit run Dashboard.py
+---
 
-Why This Matters
+## Target Users
 
-Mental healthcare continues to carry significant stigma in India and many parts of the world.
-Our goal is to assist healthcare workers by providing supportive tools that reduce workload and help identify early warning signs while preserving human judgment.
+- Rehabilitation Nurses
+- Healthcare Support Staff
+- Rehabilitation Centre Administrators
 
-Disclaimer
+---
 
-This system is intended only as a decision-support tool.
-It does not diagnose mental health conditions and does not replace clinical judgment or professional medical evaluation.
+## Technology Stack
 
-Hackathon Details
+| Technology | Purpose |
+|------------|---------|
+| Python | Core application and analysis |
+| Pandas | Data processing and analysis |
+| NumPy | Numerical operations |
+| Scikit-learn | Machine learning and behavioural analysis |
+| Streamlit | Interactive dashboard |
+| Git & GitHub | Version control and collaboration |
 
-Team Name: Techtonik
+---
 
-Hackathon: 22nd ICDCIT Conference 2026 Hackathon
+## Project Structure
+
+```text
+Care-AI/
+│
+├── AIModel.py
+├── DashBoard.py
+├── auth.py
+├── generateData.py
+│
+├── data/
+│   ├── PatientData.csv
+│   ├── nurses.csv
+│   └── images/
+│
+├── .streamlit/
+│   └── config.toml
+│
+├── README.md
+└── requirements.txt
